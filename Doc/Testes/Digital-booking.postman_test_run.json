@@ -1,0 +1,180 @@
+{
+	"id": "2bf87a2f-de34-4028-82e7-0fa74c7a1038",
+	"name": "Digital-booking",
+	"timestamp": "2023-05-18T01:03:36.656Z",
+	"collection_id": "21577664-072e9c00-c936-49db-8e54-aefec01cf374",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 4,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-05-18T01:03:35.946Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "babd65ab-44c2-4f0f-ae5f-3afd724f83b6",
+			"name": "Categoria - Listar Todos",
+			"url": "http://localhost:8080/categorias",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "ae3b09cc-3cc9-493b-b363-f9f5c21337bf",
+			"name": "Categoria - Listar por Uid",
+			"url": "http://localhost:8080/categorias/230517214952",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body inclui Hermitage Hotel": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body inclui Hermitage Hotel": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body inclui Hermitage Hotel": false
+				}
+			]
+		},
+		{
+			"id": "42fea85f-6a31-42db-8c97-c6139827d22b",
+			"name": "Categoria - Deletar",
+			"url": "http://localhost:8080/categorias/230517215908",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Successful DELETE request": false,
+				"Unsuccessful DELETE request": true
+			},
+			"testPassFailCounts": {
+				"Successful DELETE request": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Unsuccessful DELETE request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Successful DELETE request": false,
+					"Unsuccessful DELETE request": true
+				}
+			]
+		},
+		{
+			"id": "afd6fb4b-14cf-47ce-9971-bb29082b4724",
+			"name": "Categoria - Salvar",
+			"url": "http://localhost:8080/categorias",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Successful POST request": true
+			},
+			"testPassFailCounts": {
+				"Successful POST request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Successful POST request": true
+				}
+			]
+		},
+		{
+			"id": "3cc8ad41-2958-4aea-9184-74946533d118",
+			"name": "Categoria - Atualizar",
+			"url": "http://localhost:8080/categorias",
+			"time": 60,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				60
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 90,
+	"collection": {
+		"requests": [
+			{
+				"id": "babd65ab-44c2-4f0f-ae5f-3afd724f83b6",
+				"method": "GET"
+			},
+			{
+				"id": "ae3b09cc-3cc9-493b-b363-f9f5c21337bf",
+				"method": "GET"
+			},
+			{
+				"id": "42fea85f-6a31-42db-8c97-c6139827d22b",
+				"method": "DELETE"
+			},
+			{
+				"id": "afd6fb4b-14cf-47ce-9971-bb29082b4724",
+				"method": "POST"
+			},
+			{
+				"id": "3cc8ad41-2958-4aea-9184-74946533d118",
+				"method": "PATCH"
+			}
+		]
+	}
+}

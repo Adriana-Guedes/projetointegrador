@@ -1,0 +1,645 @@
+{
+	"info": {
+		"_postman_id": "375dbd78-232c-42d0-8e76-ccd22afe1089",
+		"name": "Digital-booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10174062"
+	},
+	"item": [
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Categoria - Listar Todos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/categorias",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categoria - Listar por Uid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body inclui Hermitage Hotel\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Hermitage Hotel\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/categorias/230517214952",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categorias",
+								"230517214952"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categoria - Deletar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});\r",
+									"pm.test(\"Unsuccessful DELETE request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/categorias/230517215908",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categorias",
+								"230517215908"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categoria - Salvar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descricao\": \"Resort\",\r\n    \"urlImagem\": \"https://unsplash.com/pt-br/fotografias/hDbCjHNdF48\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/categorias",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Categoria - Atualizar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uid\": 2305202146399,\r\n    \"qualificacao\": 4,\r\n    \"descricao\": \"Pousada\",\r\n    \"urlImagem\": \"https://unsplash.com/pt-br/fotografias/hDbCjHNdF48\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/categorias",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Produto - Listar Todos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto- Listar por Uid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body inclui Hermitage Hotel\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Hermitage Hotel\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos/2305222254163",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"2305222254163"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto- Deletar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});\r",
+									"pm.test(\"Unsuccessful DELETE request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([400]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/produtos/2305222229555",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"2305222229555"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto- Salvar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Cana Brava Resort\",\r\n  \"descricao\": \"O Cana Brava Resort é um destino completo de férias, na mais bela praia de Ilhéus, sul da Bahia. Aqui a diversão não tem hora para acabar, com atividades diárias para adultos e crianças. Além disso, nossos hóspedes aproveitam de deliciosas opções do serviço all inclusive, e realizam uma verdadeira viagem gastronômica por diferentes culinárias. Tudo isso em meio à paisagens encantadoras que irão te surpreender.\",\r\n  \"latitude\": -14.994043646307352,\r\n  \"longitude\": -38.99990493168996,\r\n  \"qualificacao\": 5,\r\n  \"classificacao\": 9,\r\n  \"caracteristicasLista\": [\r\n            {\r\n                \"uid\": 1234561\r\n            },\r\n            {\r\n                \"uid\": 1234562\r\n            },\r\n            {\r\n                \"uid\": 1234563\r\n            }\r\n    ],\r\n    \"imagensLista\":[\r\n        {\r\n          \"titulo\": \"Quarto\",\r\n          \"url\": \"https://images.unsplash.com/photo-1602002418082-a4443e081dd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cXVhcnRvJTIwcmVzb3J0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60\"\r\n        },\r\n        {\r\n          \"titulo\": \"Aereo\",\r\n          \"url\": \"https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1hbGRpdmFzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60\"\r\n        },\r\n        {\r\n          \"titulo\": \"Passeio\",\r\n          \"url\": \"https://images.unsplash.com/photo-1558281050-4c33200099c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fG1hbGRpdmFzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60\"\r\n        },\r\n        {\r\n          \"titulo\": \"Hotel\",\r\n          \"url\": \"https://images.unsplash.com/photo-1616594529059-7844185adda3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI1fHxtYWxkaXZhc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60\"\r\n        }\r\n  ],\r\n  \"categoria\":{\r\n      \"uid\":21520233\r\n  },\r\n  \"cidade\":{\r\n      \"uid\":30520233\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Prodiuto- Atualizar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uid\": 2305222254165,\r\n    \"nome\": \"Cana Brava\",\r\n    \"descricao\": \"O C.\",\r\n    \"latitude\": \"-38.99990493168996\",\r\n    \"longitude\": \"-14.994043646307352\",\r\n    \"qualificacao\": 5,\r\n    \"classificacao\": 9,\r\n    \"caracteristicasLista\": [\r\n        {\r\n            \"uid\": 1234562,\r\n            \"nome\": \"Televisão\",\r\n            \"icone\": \"faTv\"\r\n        },\r\n        {\r\n            \"uid\": 1234563,\r\n            \"nome\": \"Ar Condicionado\",\r\n            \"icone\": \"faSnowflake\"\r\n        },\r\n        {\r\n            \"uid\": 1234564,\r\n            \"nome\": \"Aceita Pets\",\r\n            \"icone\": \"faPaw\"\r\n        },\r\n        {\r\n            \"uid\": 1234565,\r\n            \"nome\": \"Estacionamento\",\r\n            \"icone\": \"faCar\"\r\n        },\r\n        {\r\n            \"uid\": 1234566,\r\n            \"nome\": \"Piscina\",\r\n            \"icone\": \"faPersonSwimming\"\r\n        },\r\n        {\r\n            \"uid\": 1234567,\r\n            \"nome\": \"Wifi\",\r\n            \"icone\": \"faWifi\"\r\n        }\r\n    ],\r\n    \"imagensLista\": [\r\n        {\r\n            \"uid\": 2305222253541,\r\n            \"titulo\": \"Quarto\",\r\n            \"url\": \"https://images.unsplash.com/photo-1602002418082-a4443e081dd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cXVhcnRvJTIwcmVzb3J0fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60\"\r\n        },\r\n        {\r\n            \"uid\": 2305222253542,\r\n            \"titulo\": \"Aereo\",\r\n            \"url\": \"https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG1hbGRpdmFzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60\"\r\n        },\r\n        {\r\n            \"uid\": 2305222253543,\r\n            \"titulo\": \"Passeio\",\r\n            \"url\": \"https://images.unsplash.com/photo-1558281050-4c33200099c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fG1hbGRpdmFzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60\"\r\n        },\r\n        {\r\n            \"uid\": 2305222253584,\r\n            \"titulo\": \"Hotel\",\r\n            \"url\": \"https://images.unsplash.com/photo-1616594529059-7844185adda3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI1fHxtYWxkaXZhc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60\"\r\n        }\r\n    ],\r\n    \"categoria\": {\r\n        \"uid\": 21520233,\r\n        \"descricao\": \"Hoteis\",\r\n        \"urlImagem\": \"https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80\"\r\n    },\r\n    \"cidade\": {\r\n        \"uid\": 30520231,\r\n        \"nome\": \"Ilhéus\",\r\n        \"pais\": \"Brasil\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/produtos",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto - Listar por Categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/produtos/2305230112541/categoria",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"2305230112541",
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Produto - Listar por Cidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/produtos/2305222034141/cidade",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"produtos",
+								"2305222034141",
+								"cidade"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cidades",
+			"item": [
+				{
+					"name": "Cidade-Listar Todas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/cidades",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cidade-Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ilhéus\",\r\n    \"pais\": \"Brasil\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cidades",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cidades"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autenticação",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"email@email.com\",\r\n    \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auth",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "Novo Usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Usuario\",\r\n  \"sobrenome\": \"Teste\",\r\n//   \"sobrenome\": \"Admin\",\r\n  \"email\": \"usuario.teste@email.com\",\r\n  \"senha\": \"123456\",\r\n  \"perfis\": [\r\n    // {\r\n    //   \"nome\":\"USER\"\r\n    // }\r\n    // {\r\n    //   \"nome\":\"ADMIN\"\r\n    // }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/usuarios",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reserva",
+			"item": [
+				{
+					"name": "Reserva- Listar por Uid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body inclui Hermitage Hotel\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Hermitage Hotel\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/reservas/2306132325399",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"reservas",
+								"2306132325399"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reserva - Criar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"horaInicioReserva\": \"2023-06-13T14:00:00.615Z\",\r\n  \"dataInicioReserva\": \"2023-06-20T10:30:00\",\r\n  \"dataFinalReserva\": \"2023-06-23T23:10:07.615Z\",\r\n  \"produto\": {\r\n    \"uid\": 2305222254161\r\n  },\r\n  \"usuario\": {\r\n    \"email\": \"email@email.com\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/reservas",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJBcGkgRGlnaXRhbCBCb29raW5nIiwibm9tZSI6IlVzdWFyaW8iLCJzb2JyZW5vbWUiOiJkZSBUZXN0ZSIsInN1YiI6ImVtYWlsQGVtYWlsLmNvbSIsImlhdCI6MTY4NjcwMDIzMSwiZXhwIjoxNjg2NzAwNDcxfQ.OrZpbbr1WwZ_fWug1SBBKwbbqJ_84fpbC3NwNT-iR_4",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:8080"
+		}
+	]
+}

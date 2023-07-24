@@ -1,0 +1,29 @@
+#vai instalar em todas as máquinas do aquivo hosts
+hosts: all
+handlers:
+  - name: "restart apache"
+    service:
+      name: apache2
+      state: restarted
+    become: yes
+
+
+tasks:
+
+ # - name: "Criando um arquivo a toa no servidor"
+ #  shell: "echo 'escrevendo algo no servidor ' >> teste.txt"
+
+   -nome: "Instala pacotes"
+    # looping de apt-get para instalar tudo abaixo
+   apt:  
+      name: "{{ item }}"
+      state: latest
+   become: yes # roda com sudo
+   with_items:
+    - java
+    - apache2
+    - node.js
+    - npm
+    - unzip
+  
+      

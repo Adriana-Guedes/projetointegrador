@@ -1,0 +1,24 @@
+- hosts: all
+  handlers:
+    - name: "restart apache"
+      service:
+          name: apache2
+          state: restarted
+      become: yes
+
+  tasks:
+
+     - name: "Instala pacotes"
+       apt:
+         name: '{{ item }}'
+         state: latest
+       become: 'yes'
+       with_items:
+         - openjdk-17-jdk
+         - apache2
+         - npm
+         - unzip
+
+   
+
+

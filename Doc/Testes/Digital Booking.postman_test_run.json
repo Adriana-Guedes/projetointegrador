@@ -1,0 +1,494 @@
+{
+	"id": "db70ab85-d219-4862-a059-42c3d16b9679",
+	"name": "Digital Booking",
+	"timestamp": "2023-06-29T23:02:44.225Z",
+	"collection_id": "20378185-29f0b007-c22c-45e4-af29-b8bef0619b7b",
+	"folder_id": 0,
+	"environment_id": "20378185-93aca0a4-2d23-4650-aa56-50a51162ff51",
+	"totalPass": 2,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-29T23:01:47.817Z",
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "cdac0e38-4bd0-4a45-bbdd-0181d349427e",
+			"name": "autenticacao-contrroller",
+			"url": "http://localhost:8080/auth",
+			"time": 6388,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6388
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c257c647-6e86-49f0-9324-59d6a7c34d3e",
+			"name": "Listar Categorias",
+			"url": "http://localhost:8080/categorias",
+			"time": 822,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				822
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "b9e0274d-f84b-4291-a35b-49b4696aeb34",
+			"name": "Criar uma Categoria",
+			"url": "http://localhost:8080/categorias",
+			"time": 559,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				559
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0feee2a9-0484-48c8-8d5a-ad01ff15c766",
+			"name": "Atualizar uma Categoria",
+			"url": "http://localhost:8080/categorias",
+			"time": 22,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 201": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				22
+			],
+			"allTests": [
+				{
+					"Status code is 201": false
+				}
+			]
+		},
+		{
+			"id": "d24880ad-e429-4d46-8d4d-ecf0d84fc771",
+			"name": "Retornar uma Categoria",
+			"url": "http://localhost:8080/categorias/21520233",
+			"time": 555,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				555
+			],
+			"allTests": [
+				{
+					"Status code 200": true
+				}
+			]
+		},
+		{
+			"id": "a5d45ce0-bb3e-48d5-9ee7-5ac0032bf175",
+			"name": "Deletar uma Categoria",
+			"url": "http://localhost:8080/categorias/2306271750425",
+			"time": 47,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				47
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "e239b591-c645-4a58-88ed-3473ecf5bb28",
+			"name": "Listar Cidades",
+			"url": "http://localhost:8080/cidades",
+			"time": 280,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				280
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d414bc87-e15e-48f1-9744-285305009898",
+			"name": "Criar uma Cidade",
+			"url": "http://localhost:8080/cidades",
+			"time": 102,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				102
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "93e2f89b-7461-44a6-84c4-747c5c057763",
+			"name": "Listar Produtos",
+			"url": "http://localhost:8080/produtos",
+			"time": 6247,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				6247
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8227291f-2862-47be-a79a-5abe608923e7",
+			"name": "Criar um Produto",
+			"url": "http://localhost:8080/produtos",
+			"time": 106,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				106
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4500b59c-402e-468a-960a-ec32eca03199",
+			"name": "Atualizar um produto",
+			"url": "http://localhost:8080/produtos",
+			"time": 107,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				107
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b85cc4d1-3614-47e1-9eb2-27897cc72c82",
+			"name": "Retornar um Produto",
+			"url": "http://localhost:8080/produtos/{uid}",
+			"time": 647,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				647
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4ec66f75-68f5-462c-8a00-6fd6fc966be7",
+			"name": "Deletar um Produto",
+			"url": "http://localhost:8080/produtos/ 2305222254161",
+			"time": 418,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				418
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "9aafb42d-3068-47c3-a1d8-bea7924bb1c6",
+			"name": "Listar Produtos por Categoria",
+			"url": "http://localhost:8080/produtos/{uid}/categoria",
+			"time": 501,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				501
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9004b5f9-51e5-4467-8081-29cef00b795e",
+			"name": "Listar Produtos por Cidade",
+			"url": "http://localhost:8080/produtos/{uid}/cidade",
+			"time": 94,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				94
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "28ed361a-bbf4-468e-9521-fae98028f191",
+			"name": "Listar Produtos por Cidade e/ou categoria e/ou data",
+			"url": "http://localhost:8080/produtos/filtro",
+			"time": 524,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				524
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f7c805df-f292-4ecc-9c7b-56e32a47f7c6",
+			"name": "Criar uma Reserva",
+			"url": "http://localhost:8080/reservas",
+			"time": 17,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 201": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"Status code is 201": false
+				}
+			]
+		},
+		{
+			"id": "f40d7b42-45e5-4841-b61c-cfc42d9c7c29",
+			"name": "Retornar uma Reserva",
+			"url": "http://localhost:8080/reservas/{uid}",
+			"time": 24,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				24
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f3742444-c795-47bf-a607-c611c23aa2f8",
+			"name": "Criar um Usuario",
+			"url": "http://localhost:8080/usuarios",
+			"time": 821,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				821
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 18281,
+	"collection": {
+		"requests": [
+			{
+				"id": "cdac0e38-4bd0-4a45-bbdd-0181d349427e",
+				"method": "POST"
+			},
+			{
+				"id": "c257c647-6e86-49f0-9324-59d6a7c34d3e",
+				"method": "GET"
+			},
+			{
+				"id": "b9e0274d-f84b-4291-a35b-49b4696aeb34",
+				"method": "POST"
+			},
+			{
+				"id": "0feee2a9-0484-48c8-8d5a-ad01ff15c766",
+				"method": "PATCH"
+			},
+			{
+				"id": "d24880ad-e429-4d46-8d4d-ecf0d84fc771",
+				"method": "GET"
+			},
+			{
+				"id": "a5d45ce0-bb3e-48d5-9ee7-5ac0032bf175",
+				"method": "DELETE"
+			},
+			{
+				"id": "e239b591-c645-4a58-88ed-3473ecf5bb28",
+				"method": "GET"
+			},
+			{
+				"id": "d414bc87-e15e-48f1-9744-285305009898",
+				"method": "POST"
+			},
+			{
+				"id": "93e2f89b-7461-44a6-84c4-747c5c057763",
+				"method": "GET"
+			},
+			{
+				"id": "8227291f-2862-47be-a79a-5abe608923e7",
+				"method": "POST"
+			},
+			{
+				"id": "4500b59c-402e-468a-960a-ec32eca03199",
+				"method": "PATCH"
+			},
+			{
+				"id": "b85cc4d1-3614-47e1-9eb2-27897cc72c82",
+				"method": "GET"
+			},
+			{
+				"id": "4ec66f75-68f5-462c-8a00-6fd6fc966be7",
+				"method": "DELETE"
+			},
+			{
+				"id": "9aafb42d-3068-47c3-a1d8-bea7924bb1c6",
+				"method": "GET"
+			},
+			{
+				"id": "9004b5f9-51e5-4467-8081-29cef00b795e",
+				"method": "GET"
+			},
+			{
+				"id": "28ed361a-bbf4-468e-9521-fae98028f191",
+				"method": "GET"
+			},
+			{
+				"id": "f7c805df-f292-4ecc-9c7b-56e32a47f7c6",
+				"method": "POST"
+			},
+			{
+				"id": "f40d7b42-45e5-4841-b61c-cfc42d9c7c29",
+				"method": "GET"
+			},
+			{
+				"id": "f3742444-c795-47bf-a607-c611c23aa2f8",
+				"method": "POST"
+			}
+		]
+	}
+}
